@@ -2,6 +2,13 @@
 
 from __future__ import annotations
 
+import os
+
+# strftime's "no leading zero" flag is "-" on Linux/macOS (glibc) and "#" on
+# Windows (MSVCRT); "%-d" raises ValueError there. Use this in a nested format
+# spec, e.g. f"{dt:%b {DAY}}", to get "Mar 5" on every platform.
+DAY = "%#d" if os.name == "nt" else "%-d"
+
 
 def money(value: float) -> str:
     """Format a dollar amount compactly, for example ``$4.82M`` or ``$812K``."""

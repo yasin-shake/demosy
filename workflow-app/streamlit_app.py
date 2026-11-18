@@ -29,17 +29,19 @@ today's agent run. Replace ``utils/seed.py`` with your agent's output and
 from pathlib import Path
 
 from utils import seed, store
+from utils.store import DAY, HOUR
 
 import streamlit as st
 
+# Without a sidebar, the header shows the full logo, so there is no icon_image.
+STATIC = Path(__file__).parent / "static"
+
 st.set_page_config(
     page_title="Cairn Reorder desk",
-    page_icon=":material/inventory:",
+    page_icon=STATIC / "icon.svg",
     layout="wide",
 )
 
-# Without a sidebar, the header shows the full logo, so there is no icon_image.
-STATIC = Path(__file__).parent / "static"
 logo_variant = "dark" if st.context.theme.type == "dark" else "light"
 st.logo(STATIC / f"logo-{logo_variant}.svg", size="large")
 
@@ -76,7 +78,7 @@ with st.container(horizontal=True, vertical_alignment="center"):
     with st.container(gap=None):
         st.title(page.title, icon=page.icon, anchor=False)
         st.caption(
-            f"Replenishment agent run {run:%a %b %-d, %-I:%M %p} · "
+            f"Replenishment agent run {run:%a %b {DAY}, {HOUR}:%M %p} · "
             f"{len(proposals)} proposals across {proposals['location'].nunique()} "
             f"distribution centers · {len(pending)} awaiting review"
         )
@@ -104,4 +106,8 @@ st.caption(
     f"Synthetic data for a fictional retailer: {len(seed.ITEMS)} SKUs, "
     f"{len(seed.LOCATIONS)} distribution centers. Your decisions stay in this "
     "session, and a new session starts from today's agent run."
+)
+st.caption(
+    "Unofficial internal demo styled after Barclays' brand — not an official "
+    "Barclays product or endorsement."
 )

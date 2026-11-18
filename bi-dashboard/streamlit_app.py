@@ -42,13 +42,14 @@ from utils import assistant, data
 
 import streamlit as st
 
+STATIC = Path(__file__).parent / "static"
+
 st.set_page_config(
     page_title="Nimbus BI",
-    page_icon=":material/insights:",
+    page_icon=STATIC / "icon.svg",
     layout="wide",
 )
 
-STATIC = Path(__file__).parent / "static"
 logo_variant = "dark" if st.context.theme.type == "dark" else "light"
 st.logo(
     STATIC / f"logo-{logo_variant}.svg", icon_image=STATIC / "icon.svg", size="large"
@@ -138,3 +139,8 @@ with st.container(horizontal=True, vertical_alignment="center", gap="medium"):
 summary.caption(data.current_filters().describe())
 
 page.run()
+
+st.caption(
+    "Unofficial internal demo styled after Barclays' brand — not an official "
+    "Barclays product or endorsement."
+)

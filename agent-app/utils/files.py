@@ -16,7 +16,7 @@ from typing import TYPE_CHECKING, Literal
 import pandas as pd
 from PIL import Image
 
-from utils.format import pct
+from utils.format import DAY, pct
 
 if TYPE_CHECKING:
     from streamlit.typing import UploadedFile
@@ -226,7 +226,7 @@ def describe(profile: Profile, question: str) -> str:
             answer += (
                 f"\n\n`{profile.series.value}` runs from {number(first)} to {number(last)} "
                 f"over {profile.series.points} dates ({pct(change)}), and peaks on "
-                f"{pd.Timestamp(peak):%b %-d, %Y}. I charted it below."
+                f"{pd.Timestamp(peak):%b {DAY}, %Y}. I charted it below."
             )
         answer += "\n\nOpen the canvas to see every row and the full column profile."
     elif profile.kind == "image":

@@ -24,7 +24,7 @@ import pandas as pd
 import streamlit as st
 from utils import charts, data
 from utils.definitions import DEFINITIONS
-from utils.formatting import money_md
+from utils.formatting import DAY, money_md
 
 AVATAR = str(Path(__file__).parent.parent / "static" / "icon.svg")
 STEP_PAUSE_S = 0.55
@@ -279,7 +279,7 @@ def at_risk() -> Answer:
             f"{len(soon)} of them renew in the next 90 days.\n\n"
             f"The largest is **{top['name']}** ({top['plan']}, {money_md(top['mrr'])} MRR, "
             f"health {top['health']}/100), owned by {top['owner']}. It renews "
-            f"{pd.Timestamp(top['renewal_date']):%b %-d}."
+            f"{pd.Timestamp(top['renewal_date']):%b {DAY}}."
         )
     table = risky.head(6)[["name", "plan", "mrr", "health", "renewal_date", "owner"]]
     return Answer(

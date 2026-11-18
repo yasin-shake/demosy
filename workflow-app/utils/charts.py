@@ -15,6 +15,7 @@ import numpy as np
 import pandas as pd
 
 import streamlit as st
+from utils.store import DAY
 
 LEGEND = {"top": 0, "right": 6, "icon": "roundRect", "itemGap": 16}
 # The theme color option of each decision outcome.
@@ -115,7 +116,7 @@ def demand(proposal: pd.Series) -> dict[str, Any]:
     weeks = pd.date_range(start, periods=len(history) + len(forecast), freq="7D")
     data = pd.DataFrame(
         {
-            "week": [f"{week:%b %-d}" for week in weeks],
+            "week": [f"{week:%b {DAY}}" for week in weeks],
             "Sold": [*history] + [None] * len(forecast),
             "Forecast": [None] * (len(history) - 1) + [history[-1], *forecast],
         }

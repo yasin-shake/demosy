@@ -276,4 +276,4 @@ def brief(levers: model.Levers) -> list[tuple[str, str]]:
 
 def week_range_label(weekly: pd.DataFrame) -> str:
     first, last = weekly["week"].iloc[0], weekly["week"].iloc[-1]
-    return f"{first:%b %-d, %Y} – {last:%b %-d, %Y}"
+    return f"{first:%b {model.DAY}, %Y} – {last:%b {model.DAY}, %Y}"

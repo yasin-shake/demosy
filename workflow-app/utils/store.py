@@ -33,6 +33,12 @@ if TYPE_CHECKING:
 ACTIONS = {"approve": "Approved", "hold": "Held", "reject": "Rejected"}
 STATUSES = {"approve": "approved", "hold": "held", "reject": "rejected"}
 
+# strftime's "no leading zero" flag is "-" on Linux/macOS (glibc) and "#" on
+# Windows (MSVCRT); "%-d"/"%-I" raise ValueError there. Use these in a nested
+# format spec, e.g. f"{dt:%b {DAY}}", to get "Mar 5" on every platform.
+DAY = "%#d" if os.name == "nt" else "%-d"
+HOUR = "%#I" if os.name == "nt" else "%-I"
+
 _SCHEMA = [
     """
     CREATE TABLE IF NOT EXISTS proposals (

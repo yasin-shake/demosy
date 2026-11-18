@@ -38,13 +38,14 @@ import streamlit as st
 from utils import agent, ui
 from utils.files import FILE_TYPES, Attachment
 
+STATIC = Path(__file__).parent / "static"
+
 st.set_page_config(
     page_title="Cairn Analyst",
-    page_icon=":material/forum:",
+    page_icon=STATIC / "icon.svg",
     layout="centered",
 )
 
-STATIC = Path(__file__).parent / "static"
 logo_variant = "dark" if st.context.theme.type == "dark" else "light"
 st.logo(
     STATIC / f"logo-{logo_variant}.svg", icon_image=STATIC / "icon.svg", size="large"
@@ -105,6 +106,10 @@ with st.sidebar:
     st.caption(
         "Scripted answers, synthetic data, no model. Every number is computed in "
         "Python from that data."
+    )
+    st.caption(
+        "Unofficial internal demo styled after Barclays' brand — not an "
+        "official Barclays product or endorsement."
     )
 
 # Created before the chat input, so the follow-ups sit right above it

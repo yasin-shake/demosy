@@ -104,7 +104,7 @@ with st.container(horizontal=True):
     st.metric(
         "Due today",
         len(due_today),
-        f"cutoff {due_today['cutoff'].min():%-I:%M %p}" if len(due_today) else 0,
+        f"cutoff {due_today['cutoff'].min():{store.HOUR}:%M %p}" if len(due_today) else 0,
         delta_color="orange" if len(due_today) else "gray",
         delta_arrow="off",
         icon=":material/schedule:",

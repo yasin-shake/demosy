@@ -8,6 +8,7 @@ the bottom of this module.
 
 from __future__ import annotations
 
+import os
 import time
 from dataclasses import dataclass, replace
 from datetime import date, timedelta
@@ -168,7 +169,12 @@ def forecast_weeks() -> pd.DatetimeIndex:
     return pd.date_range(AS_OF, periods=HORIZON, freq="7D")
 
 
-WEEK_LABELS = [week.strftime("%b %-d") for week in forecast_weeks()]
+# strftime's "no leading zero" flag is "-" on Linux/macOS (glibc) and "#" on
+# Windows (MSVCRT); "%-d" raises ValueError there. Use this in a nested format
+# spec, e.g. f"{dt:%b {DAY}}", to get "Mar 5" on every platform.
+DAY = "%#d" if os.name == "nt" else "%-d"
+
+WEEK_LABELS = [week.strftime(f"%b {DAY}") for week in forecast_weeks()]
 
 
 def plan_for(levers: Levers) -> Levers:

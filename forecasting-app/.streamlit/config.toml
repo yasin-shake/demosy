@@ -1,23 +1,24 @@
-# "Cairn Lab" theme: a warm, editorial look with serif headings on paper-toned
-# backgrounds, soft cards, and pill buttons, in light and dark. Categorical
-# palettes were checked with a CVD validator in both modes (adjacent pairs; the
-# first three slots also pass all-pairs for scatter charts).
+# Barclays brand theme: the bank's cyan-and-navy identity, shared across the
+# four demos so they read as one product suite. Barclays Navy (#00395D light /
+# #1070A0 dark) drives buttons, links, and primary-badge fills, since it's dark
+# enough for the white text they carry; Barclays Blue (#00AEEF) leads the logo,
+# chart palette, and lighter accents, where that contrast rule doesn't apply.
 
 [theme]
-font = "'Instrument Sans':https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap"
-headingFont = "'Fraunces':https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..800&display=swap"
+font = "'Inter':https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+headingFont = "'Inter':https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
 codeFont = "'JetBrains Mono':https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap"
 baseFontSize = 14
 baseFontWeight = 400
 codeFontSize = "13px"
-headingFontSizes = ["34px", "22px", "17px", "15px", "14px", "12px"]
-headingFontWeights = [600, 600, 600, 600, 600, 600]
-metricValueFontSize = "1.85rem"
-metricValueFontWeight = 600
-baseRadius = "large"
-buttonRadius = "full"
+headingFontSizes = ["28px", "20px", "16px", "15px", "14px", "12px"]
+headingFontWeights = [700, 650, 650, 600, 600, 600]
+metricValueFontSize = "1.8rem"
+metricValueFontWeight = 700
+baseRadius = "0.5rem"
+buttonRadius = "0.4rem"
 showWidgetBorder = true
-showSidebarBorder = false
+showSidebarBorder = true
 linkUnderline = false
 paddingTop = "1rem"
 paddingBottom = "3rem"
@@ -27,106 +28,106 @@ paddingTop = "1rem"
 paddingBottom = "1.5rem"
 
 [theme.light]
-primaryColor = "#C2410C"
-backgroundColor = "#FBF9F4"
-secondaryBackgroundColor = "#F2EDE3"
-codeBackgroundColor = "#F2EDE3"
-textColor = "#1F1A14"
-linkColor = "#B23C0B"
-borderColor = "#E5DDCF"
-codeTextColor = "#4A4036"
-blueColor = "#0369A1"
-greenColor = "#3F7D20"
-yellowColor = "#B7791F"
-orangeColor = "#C2410C"
-redColor = "#B91C1C"
-violetColor = "#7C3AED"
-grayColor = "#7A7268"
+primaryColor = "#00395D"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F2F7FA"
+codeBackgroundColor = "#F2F7FA"
+textColor = "#041E2E"
+linkColor = "#00395D"
+borderColor = "#DCE7ED"
+codeTextColor = "#1E3744"
+blueColor = "#00AEEF"
+greenColor = "#16A34A"
+yellowColor = "#CA8A04"
+orangeColor = "#C2540C"
+redColor = "#C72030"
+violetColor = "#5B5BD6"
+grayColor = "#5B6B74"
 chartCategoricalColors = [
-    "#C2410C",
-    "#008A7B",
+    "#00AEEF",
+    "#00395D",
+    "#00866F",
+    "#C2540C",
     "#5B5BD6",
     "#B7791F",
-    "#BE185D",
-    "#0369A1",
-    "#4D8A0C",
-    "#7C3AED",
+    "#C72030",
+    "#5B6B74",
 ]
 chartSequentialColors = [
-    "#FBEEE4",
-    "#F7DCC8",
-    "#F0C2A1",
-    "#E7A377",
-    "#DC8350",
-    "#CF6532",
-    "#C2410C",
-    "#A13509",
-    "#802A07",
-    "#5F1F05",
+    "#E7F7FD",
+    "#C7ECFA",
+    "#9FDDF5",
+    "#6FCBEF",
+    "#3DB8E9",
+    "#00AEEF",
+    "#0092C9",
+    "#00739C",
+    "#00395D",
+    "#002438",
 ]
-dataframeBorderColor = "#E5DDCF"
-dataframeHeaderBackgroundColor = "#F5F0E7"
-dataframeHeaderTextColor = "#5E554A"
+dataframeBorderColor = "#DCE7ED"
+dataframeHeaderBackgroundColor = "#F6FAFC"
+dataframeHeaderTextColor = "#2F4954"
 
 [theme.dark]
-primaryColor = "#C8501E"
-backgroundColor = "#15130F"
-secondaryBackgroundColor = "#211D18"
-codeBackgroundColor = "#211D18"
-textColor = "#EEE8DE"
-linkColor = "#F0956A"
-borderColor = "#342E26"
-codeTextColor = "#D6CDBF"
-blueColor = "#3A9BDA"
-greenColor = "#7DB45A"
-yellowColor = "#D9A53A"
-orangeColor = "#E0703A"
-redColor = "#EF6A5A"
-violetColor = "#A58BF0"
-grayColor = "#948B80"
+primaryColor = "#1070A0"
+backgroundColor = "#041620"
+secondaryBackgroundColor = "#0A2432"
+codeBackgroundColor = "#0A2432"
+textColor = "#E7F3F8"
+linkColor = "#6FCBEF"
+borderColor = "#163A48"
+codeTextColor = "#C7DEE7"
+blueColor = "#1FC1FF"
+greenColor = "#34D399"
+yellowColor = "#FACC15"
+orangeColor = "#FB923C"
+redColor = "#F87171"
+violetColor = "#A78BFA"
+grayColor = "#8FA3AD"
 chartCategoricalColors = [
-    "#E0703A",
-    "#1E9E93",
-    "#7B76EE",
-    "#C08A1C",
-    "#E0558F",
-    "#3A9BDA",
-    "#6A9E2E",
-    "#9273E6",
+    "#1FC1FF",
+    "#5FA8C9",
+    "#2BBBA3",
+    "#E5833A",
+    "#8B85F0",
+    "#D3A13A",
+    "#E5636F",
+    "#8FA3AD",
 ]
 chartSequentialColors = [
-    "#2A1A12",
-    "#3A2014",
-    "#4C2716",
-    "#612F18",
-    "#78391B",
-    "#91441F",
-    "#AD5226",
-    "#C9663A",
-    "#E08A5F",
-    "#F2B48F",
+    "#031219",
+    "#062233",
+    "#0A3348",
+    "#0D4760",
+    "#115C79",
+    "#147494",
+    "#188CAF",
+    "#3FA7D0",
+    "#78C5E5",
+    "#B4E2F2",
 ]
-dataframeBorderColor = "#342E26"
-dataframeHeaderBackgroundColor = "#1B1814"
-dataframeHeaderTextColor = "#B3A99B"
+dataframeBorderColor = "#163A48"
+dataframeHeaderBackgroundColor = "#071C27"
+dataframeHeaderTextColor = "#9DB9C3"
 
 [theme.light.sidebar]
-backgroundColor = "#F4EFE6"
-secondaryBackgroundColor = "#EAE3D6"
-codeBackgroundColor = "#EAE3D6"
-textColor = "#1F1A14"
-borderColor = "#E0D7C7"
-primaryColor = "#C2410C"
-linkColor = "#B23C0B"
+backgroundColor = "#F6FAFC"
+secondaryBackgroundColor = "#ECF4F7"
+codeBackgroundColor = "#ECF4F7"
+textColor = "#041E2E"
+borderColor = "#DCE7ED"
+primaryColor = "#00395D"
+linkColor = "#00395D"
 
 [theme.dark.sidebar]
-backgroundColor = "#1A1713"
-secondaryBackgroundColor = "#26211B"
-codeBackgroundColor = "#26211B"
-textColor = "#EEE8DE"
-borderColor = "#342E26"
-primaryColor = "#C8501E"
-linkColor = "#F0956A"
+backgroundColor = "#061B26"
+secondaryBackgroundColor = "#0C2A38"
+codeBackgroundColor = "#0C2A38"
+textColor = "#E7F3F8"
+borderColor = "#163A48"
+primaryColor = "#1070A0"
+linkColor = "#6FCBEF"
 
 [global]
 # The lever reset and scenario load callbacks assign the levers' keys, the

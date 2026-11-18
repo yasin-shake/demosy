@@ -137,13 +137,13 @@ def review_drawer(proposal_id: str) -> None:
             f":primary[:material/smart_toy:] The agent recommends ordering "
             f"**{proposal['proposed_qty']:,} units** ({cases} cases of "
             f"{proposal['case_pack']}) for **{rules.money(proposal['value'])}**. They "
-            f"arrive **{proposal['arrives']:%b %-d}**, and stock runs out around "
-            f"**{proposal['stockout_date']:%b %-d}** without them."
+            f"arrive **{proposal['arrives']:%b {store.DAY}}**, and stock runs out around "
+            f"**{proposal['stockout_date']:%b {store.DAY}}** without them."
         )
         st.caption(
             f"Confidence {proposal['confidence']:.0%} · order cutoff "
-            f"{proposal['cutoff']:%a %b %-d, %-I:%M %p} · proposed "
-            f"{proposal['created_at']:%b %-d, %-I:%M %p}"
+            f"{proposal['cutoff']:%a %b {store.DAY}, {store.HOUR}:%M %p} · proposed "
+            f"{proposal['created_at']:%b {store.DAY}, {store.HOUR}:%M %p}"
         )
 
     with st.container(horizontal=True):
@@ -181,7 +181,7 @@ def review_drawer(proposal_id: str) -> None:
     if proposal["status"] not in ("pending", "held"):
         st.info(
             f"{proposal['status'].title()} by {proposal['decided_by']} on "
-            f"{proposal['decided_at']:%b %-d, %-I:%M %p}.",
+            f"{proposal['decided_at']:%b {store.DAY}, {store.HOUR}:%M %p}.",
             icon=":material/task_alt:",
         )
         return

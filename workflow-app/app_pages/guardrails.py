@@ -32,7 +32,7 @@ with editor_col.container(border=True, height="stretch"):
     ui.card_header(
         "Limits by category",
         f"Last changed by {policies.loc[policies['updated_at'].idxmax(), 'updated_by']} "
-        f"on {updated:%b %-d}. Edit a cell, check the preview, then save.",
+        f"on {updated:%b {store.DAY}}. Edit a cell, check the preview, then save.",
     )
     edited = st.data_editor(
         policies[COLUMNS],

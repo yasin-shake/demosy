@@ -31,13 +31,14 @@ from utils import model, ui
 
 import streamlit as st
 
+STATIC = Path(__file__).parent / "static"
+
 st.set_page_config(
     page_title="Cairn Demand lab",
-    page_icon=":material/model_training:",
+    page_icon=STATIC / "icon.svg",
     layout="wide",
 )
 
-STATIC = Path(__file__).parent / "static"
 logo_variant = "dark" if st.context.theme.type == "dark" else "light"
 st.logo(
     STATIC / f"logo-{logo_variant}.svg", icon_image=STATIC / "icon.svg", size="large"
@@ -162,10 +163,14 @@ with st.sidebar:
             help="Simulated seasons per scenario. More is smoother and slower.",
         )
     st.caption("The levers are saved in the URL, so you can share this scenario.")
+    st.caption(
+        "Unofficial internal demo styled after Barclays' brand — not an "
+        "official Barclays product or endorsement."
+    )
 
 levers = ui.current_levers()
 summary.caption(
-    f"{item.description} · {levers.describe()} · 26 weeks from {model.AS_OF:%b %-d, %Y}"
+    f"{item.description} · {levers.describe()} · 26 weeks from {model.AS_OF:%b {model.DAY}, %Y}"
 )
 if save:
     ui.save_scenario_dialog(levers)

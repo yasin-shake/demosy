@@ -1,130 +1,130 @@
-# "Ivory" theme: a calm, literary look for a chat app. Warm ivory surfaces, a
-# clay accent, a serif for headings and a soft sans for text, in light and dark.
-# The clay passes 4.5:1 against white button text and against the light
-# background. Categorical palettes were checked with a CVD simulation in both
-# modes (adjacent pairs; the first three slots also pass all-pairs).
+# Barclays brand theme: the bank's cyan-and-navy identity, shared across the
+# four demos so they read as one product suite. Barclays Navy (#00395D light /
+# #1070A0 dark) drives buttons, links, and primary-badge fills, since it's dark
+# enough for the white text they carry; Barclays Blue (#00AEEF) leads the logo,
+# chart palette, and lighter accents, where that contrast rule doesn't apply.
 
 [theme]
-font = "'DM Sans':https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..700&display=swap"
-headingFont = "'Source Serif 4':https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap"
-codeFont = "'IBM Plex Mono':https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-baseFontSize = 15
+font = "'Inter':https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+headingFont = "'Inter':https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+codeFont = "'JetBrains Mono':https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap"
+baseFontSize = 14
 baseFontWeight = 400
 codeFontSize = "13px"
-headingFontSizes = ["36px", "24px", "19px", "16px", "15px", "13px"]
-headingFontWeights = [500, 500, 600, 600, 600, 600]
-metricValueFontSize = "1.7rem"
-metricValueFontWeight = 500
-baseRadius = "0.9rem"
-buttonRadius = "0.65rem"
+headingFontSizes = ["28px", "20px", "16px", "15px", "14px", "12px"]
+headingFontWeights = [700, 650, 650, 600, 600, 600]
+metricValueFontSize = "1.8rem"
+metricValueFontWeight = 700
+baseRadius = "0.5rem"
+buttonRadius = "0.4rem"
 showWidgetBorder = true
 showSidebarBorder = true
 linkUnderline = false
-paddingTop = "1.5rem"
-paddingBottom = "2rem"
+paddingTop = "1rem"
+paddingBottom = "3rem"
 
 [theme.sidebar]
 paddingTop = "1rem"
 paddingBottom = "1.5rem"
 
 [theme.light]
-primaryColor = "#B85636"
-backgroundColor = "#FAF9F5"
-secondaryBackgroundColor = "#F0EEE6"
-codeBackgroundColor = "#F0EEE6"
-textColor = "#1F1E1B"
-linkColor = "#A64B2D"
-borderColor = "#E3DFD4"
-codeTextColor = "#4A463C"
-blueColor = "#4A6FA5"
-greenColor = "#5E8A3C"
-yellowColor = "#B98A2E"
-orangeColor = "#C46A2D"
-redColor = "#B5402F"
-violetColor = "#7D4E7E"
-grayColor = "#73726C"
+primaryColor = "#00395D"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F2F7FA"
+codeBackgroundColor = "#F2F7FA"
+textColor = "#041E2E"
+linkColor = "#00395D"
+borderColor = "#DCE7ED"
+codeTextColor = "#1E3744"
+blueColor = "#00AEEF"
+greenColor = "#16A34A"
+yellowColor = "#CA8A04"
+orangeColor = "#C2540C"
+redColor = "#C72030"
+violetColor = "#5B5BD6"
+grayColor = "#5B6B74"
 chartCategoricalColors = [
-    "#B85636",
-    "#4A6FA5",
-    "#D4A24C",
-    "#6E8F4A",
-    "#7D4E7E",
-    "#D07090",
-    "#5C5850",
-    "#2F8A85",
+    "#00AEEF",
+    "#00395D",
+    "#00866F",
+    "#C2540C",
+    "#5B5BD6",
+    "#B7791F",
+    "#C72030",
+    "#5B6B74",
 ]
 chartSequentialColors = [
-    "#FBEFE9",
-    "#F5DACD",
-    "#EDBFAA",
-    "#E2A185",
-    "#D58463",
-    "#C76A47",
-    "#B85636",
-    "#99452A",
-    "#7A3520",
-    "#5C2716",
+    "#E7F7FD",
+    "#C7ECFA",
+    "#9FDDF5",
+    "#6FCBEF",
+    "#3DB8E9",
+    "#00AEEF",
+    "#0092C9",
+    "#00739C",
+    "#00395D",
+    "#002438",
 ]
-dataframeBorderColor = "#E3DFD4"
-dataframeHeaderBackgroundColor = "#F3F1EA"
-dataframeHeaderTextColor = "#5E5B52"
+dataframeBorderColor = "#DCE7ED"
+dataframeHeaderBackgroundColor = "#F6FAFC"
+dataframeHeaderTextColor = "#2F4954"
 
 [theme.dark]
-primaryColor = "#B85636"
-backgroundColor = "#262624"
-secondaryBackgroundColor = "#30302D"
-codeBackgroundColor = "#30302D"
-textColor = "#F3F1EA"
-linkColor = "#E59575"
-borderColor = "#3F3E3A"
-codeTextColor = "#D7D3C8"
-blueColor = "#7196D0"
-greenColor = "#8FB067"
-yellowColor = "#E3B45A"
-orangeColor = "#E08A55"
-redColor = "#E5735F"
-violetColor = "#B07DB0"
-grayColor = "#9C9A92"
+primaryColor = "#1070A0"
+backgroundColor = "#041620"
+secondaryBackgroundColor = "#0A2432"
+codeBackgroundColor = "#0A2432"
+textColor = "#E7F3F8"
+linkColor = "#6FCBEF"
+borderColor = "#163A48"
+codeTextColor = "#C7DEE7"
+blueColor = "#1FC1FF"
+greenColor = "#34D399"
+yellowColor = "#FACC15"
+orangeColor = "#FB923C"
+redColor = "#F87171"
+violetColor = "#A78BFA"
+grayColor = "#8FA3AD"
 chartCategoricalColors = [
-    "#D9774F",
-    "#7196D0",
-    "#E3B45A",
-    "#4DB0A9",
-    "#8FB067",
-    "#E58AA8",
-    "#B07DB0",
-    "#B5B0A4",
+    "#1FC1FF",
+    "#5FA8C9",
+    "#2BBBA3",
+    "#E5833A",
+    "#8B85F0",
+    "#D3A13A",
+    "#E5636F",
+    "#8FA3AD",
 ]
 chartSequentialColors = [
-    "#2B1C16",
-    "#3A2219",
-    "#4C2A1D",
-    "#613321",
-    "#783D27",
-    "#91492E",
-    "#AD5837",
-    "#C96B47",
-    "#E08A67",
-    "#F2B79C",
+    "#031219",
+    "#062233",
+    "#0A3348",
+    "#0D4760",
+    "#115C79",
+    "#147494",
+    "#188CAF",
+    "#3FA7D0",
+    "#78C5E5",
+    "#B4E2F2",
 ]
-dataframeBorderColor = "#3F3E3A"
-dataframeHeaderBackgroundColor = "#2C2C29"
-dataframeHeaderTextColor = "#B5B2A8"
+dataframeBorderColor = "#163A48"
+dataframeHeaderBackgroundColor = "#071C27"
+dataframeHeaderTextColor = "#9DB9C3"
 
 [theme.light.sidebar]
-backgroundColor = "#F3F1EA"
-secondaryBackgroundColor = "#E9E6DC"
-codeBackgroundColor = "#E9E6DC"
-textColor = "#1F1E1B"
-borderColor = "#E3DFD4"
-primaryColor = "#B85636"
-linkColor = "#A64B2D"
+backgroundColor = "#F6FAFC"
+secondaryBackgroundColor = "#ECF4F7"
+codeBackgroundColor = "#ECF4F7"
+textColor = "#041E2E"
+borderColor = "#DCE7ED"
+primaryColor = "#00395D"
+linkColor = "#00395D"
 
 [theme.dark.sidebar]
-backgroundColor = "#1F1E1C"
-secondaryBackgroundColor = "#2A2A27"
-codeBackgroundColor = "#2A2A27"
-textColor = "#F3F1EA"
-borderColor = "#3F3E3A"
-primaryColor = "#B85636"
-linkColor = "#E59575"
+backgroundColor = "#061B26"
+secondaryBackgroundColor = "#0C2A38"
+codeBackgroundColor = "#0C2A38"
+textColor = "#E7F3F8"
+borderColor = "#163A48"
+primaryColor = "#1070A0"
+linkColor = "#6FCBEF"
